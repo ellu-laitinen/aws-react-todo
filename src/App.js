@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <div style={styles.container}>
-      <h2>Amplify Todos</h2>
+      <h2 style={styles.h2}>Elisabet's Todos</h2>
       <input
         onChange={event => setInput('name', event.target.value)}
         style={styles.input}
@@ -70,12 +70,14 @@ const App = () => {
 }
 
 const styles = {
+
   container: { width: 400, margin: '0 auto', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', padding: 20 },
-  todo: { marginBottom: 15 },
-  input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
-  todoName: { fontSize: 20, fontWeight: 'bold' },
-  todoDescription: { marginBottom: 0 },
-  button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
+  h2: { fontSize: 35 },
+  todo: { marginBottom: 15, borderBottom: '1px black solid', paddingBottom: 15 },
+  input: { border: 'black solid 1px', borderRadius: '3px', backgroundColor: 'whitesmoke', marginBottom: 10, padding: 8, fontSize: 18 },
+  todoName: { fontSize: 'xx-large', fontWeight: 'bold', textDecoration: 'underline' },
+  todoDescription: { marginBottom: 0, fontSize: 25 },
+  button: { backgroundColor: 'purple', border: '1px solid black', boxShadow: '0 0 5px black', borderRadius: '3px', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
 }
 
 export default withAuthenticator(App)
